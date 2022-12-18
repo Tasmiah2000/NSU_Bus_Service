@@ -1,0 +1,74 @@
+*{ /* universal selector for all tab margin, padding and front */
+    margin: 0;
+    padding: 0;
+    font-family: Century Gothic;
+  }
+  header{ /* header tag style  */
+    background-image: url('ishome.jpg'); /* background image  */
+    height: 100vh;
+    background-size:cover;
+    background-position:center;
+  }
+  ul{
+    float: right; /* navigation bar on right ride */
+    list-style-type: none;
+    margin-top: 25px; /* navigation bar little bit below */
+  }
+  ul li{
+    display: inline-block; /* display navigation bar link on side by side*/
+  }
+  ul li a{ /* navigation bar text decoration */
+    text-decoration: none;
+    color: blue;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+  }
+  ul li a:hover{ /* color change on click */
+    background-color: #fff; /* background white */
+    color: #000 /* link name black */
+  }
+  ul li.active a{ /* home navigation bar always active white  */
+    background-color: #fff;
+    color: #000
+  }
+  .logo img{ /* logo */
+    float: left;
+    width:500px;
+    height: auto;
+  }
+  .main{ /* main style */
+    max-width: 1200px;
+    margin: auto;
+  }
+  .title{ /* title style */
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .title h1{ /* header style */
+    color: blue;
+    font-size:70px;
+  }
+  .button{  /* button style */
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 16px;
+  }
+  .btn{ /* button colour size position */
+    border: 1px solid black;
+    padding: 10px 40px;
+    font-weight: 700;
+    color: blue;
+    text-decoration: none;
+    transition: 0.6s ease;
+    display: block;
+    text-align: center;
+  }
+  .btn:hover{ /* button color change on click */
+    background-color: #fff;
+    color: #000;
+  }

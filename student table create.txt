@@ -1,0 +1,53 @@
+ create table userInf  (
+                             user_id                int(100),
+                             name           varchar(100),
+                             phone_num  varchar(100),
+                             email           varchar(100),
+                             HOME_adrs        varchar(100),
+                             passWord        varchar(100),
+                             PRIMARY key (user_id)
+                              ) 
+
+ create table route  (
+                               route_id                int(100),
+                             dis_inKm           varchar(100),
+                             
+                             fromDES          varchar(100),
+                             toDES        varchar(100),
+                             PRIMARY key (route_id)
+                              ) 
+
+create table BUS(
+                               BUS_id                int(100),
+                             BUS_NO           varchar(100),
+                             time                   varchar(100),
+                             route_id           int(100),
+                             avlSEAT          varchar(100),
+                             totalSeat      varchar(100),
+                             PRIMARY key(BUS_id),
+                             FOREIGN key(route_id)REFERENCES route(route_id)
+);
+
+
+create table SED_JURNY(
+                               BUS_id                int(100),
+                             
+                             route_id           int(100),
+                             avlSEAT          varchar(100),
+                             totalSeat      varchar(100),
+                             time                  varchar(100),
+                             ended          varchar(100),
+                             FOREIGN key(route_id)REFERENCES route(route_id),
+                             FOREIGN key(time)REFERENCES bus(time),
+                             FOREIGN key(avlSEAT)REFERENCES bus(avlSEAT),
+    					     FOREIGN key(BUS_id)REFERENCES bus(BUS_id),
+                             FOREIGN key(totalSeat)REFERENCES bus(totalSeat)
+    
+    
+);
+http://localhost/phpmyadmin/index.php?route=/sql&pos=0&db=nsu_bus&table=bus
+
+
+
+INSERT INTO route VALUES (001,15,06.00,'Narayangonj','NSU'),(002,7,07.00,'Mirpur','NSU'),(003,5,07.20,'Gulshan','NSU'),
+                         (004,9,06.30,'Jatrabari','NSU'),
